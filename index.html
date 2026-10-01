@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>PHOTOCRAFT-ANTAGARH | Photo Frames & Gifts</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 6px;
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #fff1e6, #ffe0c2);
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .product {
+      max-width: 500px;
+      margin: 25px auto;
+      background: white;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+      height: 260px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ddd, #aaa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .product h3 {
+      margin-top: 18px;
+      font-size: 23px;
+    }
+
+    .price {
+      color: #e53935;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .features {
+      margin: 15px 0;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .order-btn {
+      width: 100%;
+      padding: 15px;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background: #333;
+    }
+
+    .order-section {
+      display: none;
+      max-width: 500px;
+      margin: 20px auto 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .order-section h2 {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 14px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .note {
+      background: #fff8e1;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>PHOTOCRAFT-ANTAGARH</h1>
+  <p>Personalized Photo Frames & Gifts</p>
+</header>
+
+<section class="hero">
+  <h2>आपकी यादें, हमारे Frame में ❤️</h2>
+  <p>
+    Birthday, Anniversary, Teachers Day और हर खास मौके के लिए
+    Personalized Photo Frame.
+  </p>
+</section>
+
+<section class="product">
+
+  <div class="product-image">
+    🖼️<br>
+    PHOTO FRAME
+  </div>
+
+  <h3>Personalized Photo Frame</h3>
+
+  <div class="price">₹250</div>
+
+  <div class="features">
+    ✅ Custom Photo Frame<br>
+    ✅ आपकी पसंद का नाम / Text<br>
+    ✅ Premium Printing<br>
+    ✅ Gift के लिए Perfect
+  </div>
+
+  <button class="order-btn" onclick="showOrder()">
+    ORDER NOW
+  </button>
+
+</section>
+
+<section class="order-section" id="orderSection">
+
+  <h2>🛒 अपना Order दें</h2>
+
+  <form onsubmit="sendOrder(event)">
+
+    <label>आपका नाम</label>
+    <input type="text" id="name" placeholder="अपना नाम लिखें" required>
+
+    <label>मोबाइल नंबर</label>
+    <input type="tel" id="mobile" placeholder="10 digit mobile number" required>
+
+    <label>Frame Type</label>
+    <select id="frame">
+      <option>Personalized Photo Frame - ₹250</option>
+    </select>
+
+    <label>Quantity</label>
+    <input type="number" id="quantity" value="1" min="1" required>
+
+    <label>Delivery Address</label>
+    <textarea id="address" placeholder="पूरा पता लिखें" required></textarea>
+
+    <label>Frame पर क्या लिखना है?</label>
+    <textarea id="customText"
+      placeholder="जैसे: Happy Birthday Rahul"></textarea>
+
+    <button class="submit-btn" type="submit">
+      📲 ORDER ON WHATSAPP
+    </button>
+
+  </form>
+
+  <div class="note">
+    📸 <b>Photo कैसे भेजें?</b><br>
+    Order submit करने के बाद WhatsApp पर अपनी फोटो भेजें।
+    हमारी टीम आपसे order confirm करने के लिए संपर्क करेगी।
+  </div>
+
+</section>
+
+<footer>
+  © 2026 PHOTOCRAFT-ANTAGARH<br>
+  📱 WhatsApp: 9238816125<br>
+  📧 Kankeralert@gmail.com
+</footer>
+
+<script>
+
+function showOrder() {
+  document.getElementById("orderSection").style.display = "block";
+
+  document.getElementById("orderSection").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function sendOrder(event) {
+
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const mobile = document.getElementById("mobile").value;
+  const frame = document.getElementById("frame").value;
+  const quantity = document.getElementById("quantity").value;
+  const address = document.getElementById("address").value;
+  const customText = document.getElementById("customText").value;
+
+  const total = 250 * quantity;
+
+  const message =
+    "🛍️ NEW PHOTO FRAME ORDER%0A%0A" +
+    "👤 Name: " + name + "%0A" +
+    "📱 Mobile: " + mobile + "%0A" +
+    "🖼️ Frame: " + frame + "%0A" +
+    "🔢 Quantity: " + quantity + "%0A" +
+    "💰 Total: ₹" + total + "%0A" +
+    "📍 Address: " + address + "%0A" +
+    "✍️ Custom Text: " + customText + "%0A%0A" +
+    "📸 Photo WhatsApp पर भेजूँगा।";
+
+  window.open(
+    "https://wa.me/919238816125?text=" + message,
+    "_blank"
+  );
+}
+
+</script>
+
+</body>
+</html>
