@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>PHOTOCRAFT-ANTAGARH | Photo Frames & Gifts</title>
+  <title>PHOTOCRAFT-ANTAGARH</title>
 
   <style>
     * {
@@ -15,67 +14,68 @@
     }
 
     body {
-      background: #f7f7f7;
+      background: #f5f5f5;
       color: #222;
     }
 
     header {
       background: #111;
       color: white;
-      padding: 18px 15px;
       text-align: center;
+      padding: 22px 15px;
     }
 
     header h1 {
       font-size: 26px;
-      letter-spacing: 1px;
     }
 
     header p {
       margin-top: 6px;
       color: #ddd;
-      font-size: 14px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #fff1e6, #ffe0c2);
-      padding: 35px 20px;
       text-align: center;
+      padding: 35px 20px;
+      background: linear-gradient(135deg, #fff0df, #ffd4ad);
     }
 
     .hero h2 {
-      font-size: 30px;
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .product {
-      max-width: 500px;
+    .container {
+      max-width: 520px;
       margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .card {
       background: white;
+      padding: 20px;
       border-radius: 18px;
-      padding: 18px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
 
-    .product-image {
-      height: 260px;
+    .frame-image {
+      width: 100%;
+      height: 280px;
+      background: #ddd;
       border-radius: 14px;
-      background: linear-gradient(135deg, #ddd, #aaa);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #555;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       text-align: center;
     }
 
-    .product h3 {
+    .card h3 {
       margin-top: 18px;
       font-size: 23px;
     }
@@ -88,90 +88,96 @@
     }
 
     .features {
+      line-height: 1.9;
       margin: 15px 0;
-      line-height: 1.8;
-      color: #444;
     }
 
-    .order-btn {
+    .order-btn,
+    .submit-btn,
+    .whatsapp-btn {
       width: 100%;
-      padding: 15px;
-      background: #111;
-      color: white;
-      border: none;
+      display: block;
+      border: 0;
       border-radius: 10px;
+      padding: 15px;
       font-size: 18px;
       font-weight: bold;
+      text-align: center;
+      text-decoration: none;
       cursor: pointer;
     }
 
-    .order-btn:hover {
-      background: #333;
+    .order-btn {
+      background: #111;
+      color: white;
     }
 
-    .order-section {
+    #orderBox {
       display: none;
-      max-width: 500px;
-      margin: 20px auto 40px;
-      background: white;
-      padding: 20px;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
-
-    .order-section h2 {
-      margin-bottom: 15px;
+      margin-top: 25px;
     }
 
     label {
       display: block;
-      margin-top: 12px;
-      margin-bottom: 5px;
+      margin-top: 14px;
+      margin-bottom: 6px;
       font-weight: bold;
     }
 
     input,
-    textarea,
-    select {
+    select,
+    textarea {
       width: 100%;
-      padding: 12px;
+      padding: 13px;
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 16px;
     }
 
     textarea {
-      height: 100px;
-      resize: none;
+      min-height: 90px;
+      resize: vertical;
     }
 
     .submit-btn {
-      width: 100%;
-      margin-top: 18px;
-      padding: 14px;
+      margin-top: 20px;
       background: #25D366;
       color: white;
-      border: none;
-      border-radius: 9px;
-      font-size: 18px;
-      font-weight: bold;
+    }
+
+    #successBox {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #successBox h2 {
+      color: #159447;
+      margin-bottom: 10px;
+    }
+
+    .whatsapp-btn {
+      margin-top: 18px;
+      background: #25D366;
+      color: white;
     }
 
     .note {
-      background: #fff8e1;
-      padding: 12px;
       margin-top: 15px;
+      padding: 13px;
+      background: #fff8df;
       border-radius: 8px;
-      font-size: 14px;
       line-height: 1.5;
+      font-size: 14px;
     }
 
     footer {
+      margin-top: 35px;
+      padding: 22px;
       background: #111;
       color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      line-height: 1.8;
     }
   </style>
 </head>
@@ -191,70 +197,163 @@
   </p>
 </section>
 
-<section class="product">
+<div class="container">
 
-  <div class="product-image">
-    🖼️<br>
-    PHOTO FRAME
-  </div>
+  <div class="card">
 
-  <h3>Personalized Photo Frame</h3>
+    <div class="frame-image">
+      🖼️<br>
+      PHOTO FRAME
+    </div>
 
-  <div class="price">₹250</div>
+    <h3>Personalized Photo Frame</h3>
 
-  <div class="features">
-    ✅ Custom Photo Frame<br>
-    ✅ आपकी पसंद का नाम / Text<br>
-    ✅ Premium Printing<br>
-    ✅ Gift के लिए Perfect
-  </div>
+    <div class="price">₹250</div>
 
-  <button class="order-btn" onclick="showOrder()">
-    ORDER NOW
-  </button>
+    <div class="features">
+      ✅ Premium Photo Frame<br>
+      ✅ Custom Name / Text<br>
+      ✅ Gift के लिए Perfect<br>
+      ✅ Photo WhatsApp पर भेजें
+    </div>
 
-</section>
-
-<section class="order-section" id="orderSection">
-
-  <h2>🛒 अपना Order दें</h2>
-
-  <form onsubmit="sendOrder(event)">
-
-    <label>आपका नाम</label>
-    <input type="text" id="name" placeholder="अपना नाम लिखें" required>
-
-    <label>मोबाइल नंबर</label>
-    <input type="tel" id="mobile" placeholder="10 digit mobile number" required>
-
-    <label>Frame Type</label>
-    <select id="frame">
-      <option>Personalized Photo Frame - ₹250</option>
-    </select>
-
-    <label>Quantity</label>
-    <input type="number" id="quantity" value="1" min="1" required>
-
-    <label>Delivery Address</label>
-    <textarea id="address" placeholder="पूरा पता लिखें" required></textarea>
-
-    <label>Frame पर क्या लिखना है?</label>
-    <textarea id="customText"
-      placeholder="जैसे: Happy Birthday Rahul"></textarea>
-
-    <button class="submit-btn" type="submit">
-      📲 ORDER ON WHATSAPP
+    <button class="order-btn" onclick="openOrder()">
+      🛒 ORDER NOW
     </button>
 
-  </form>
-
-  <div class="note">
-    📸 <b>Photo कैसे भेजें?</b><br>
-    Order submit करने के बाद WhatsApp पर अपनी फोटो भेजें।
-    हमारी टीम आपसे order confirm करने के लिए संपर्क करेगी।
   </div>
 
-</section>
+
+  <div class="card" id="orderBox">
+
+    <h2>🛍️ Order Details</h2>
+
+    <form
+      id="orderForm"
+      action="https://formspree.io/f/maenzojd"
+      method="POST"
+    >
+
+      <label>नाम *</label>
+
+      <input
+        type="text"
+        name="नाम"
+        id="name"
+        placeholder="अपना नाम"
+        required
+      >
+
+
+      <label>मोबाइल नंबर *</label>
+
+      <input
+        type="tel"
+        name="मोबाइल नंबर"
+        id="mobile"
+        placeholder="10 digit mobile number"
+        maxlength="10"
+        required
+      >
+
+
+      <label>Frame *</label>
+
+      <select name="Frame">
+        <option value="Personalized Photo Frame">
+          Personalized Photo Frame - ₹250
+        </option>
+      </select>
+
+
+      <label>Quantity *</label>
+
+      <input
+        type="number"
+        name="Quantity"
+        id="quantity"
+        value="1"
+        min="1"
+        required
+      >
+
+
+      <label>Delivery Address *</label>
+
+      <textarea
+        name="पता"
+        id="address"
+        placeholder="पूरा पता लिखें"
+        required
+      ></textarea>
+
+
+      <label>Frame पर क्या लिखना है?</label>
+
+      <textarea
+        name="Custom Text"
+        id="customText"
+        placeholder="जैसे: Happy Birthday Rahul"
+      ></textarea>
+
+
+      <input
+        type="hidden"
+        name="Total Amount"
+        id="totalAmount"
+      >
+
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New PHOTOCRAFT-ANTAGARH Order"
+      >
+
+
+      <button
+        type="submit"
+        class="submit-btn"
+        id="submitBtn"
+      >
+        ✅ PLACE ORDER
+      </button>
+
+    </form>
+
+
+    <div id="successBox">
+
+      <h2>✅ Order Received!</h2>
+
+      <p>
+        आपका order successfully प्राप्त हो गया है।
+      </p>
+
+      <p>
+        अब अपनी फोटो WhatsApp पर भेज दें।
+      </p>
+
+      <a
+        id="whatsappButton"
+        class="whatsapp-btn"
+        target="_blank"
+      >
+        📸 WhatsApp पर Photo भेजें
+      </a>
+
+    </div>
+
+
+    <div class="note">
+      📸 <b>Photo कैसे भेजें?</b><br>
+      Order करने के बाद WhatsApp button दबाकर अपनी फोटो भेजें।
+    </div>
+
+  </div>
+
+</div>
+
 
 <footer>
   © 2026 PHOTOCRAFT-ANTAGARH<br>
@@ -262,45 +361,111 @@
   📧 Kankeralert@gmail.com
 </footer>
 
+
 <script>
 
-function showOrder() {
-  document.getElementById("orderSection").style.display = "block";
+function openOrder() {
 
-  document.getElementById("orderSection").scrollIntoView({
+  var box = document.getElementById("orderBox");
+
+  box.style.display = "block";
+
+  box.scrollIntoView({
     behavior: "smooth"
   });
+
 }
 
-function sendOrder(event) {
+
+document.getElementById("orderForm").addEventListener("submit", function(event) {
 
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const mobile = document.getElementById("mobile").value;
-  const frame = document.getElementById("frame").value;
-  const quantity = document.getElementById("quantity").value;
-  const address = document.getElementById("address").value;
-  const customText = document.getElementById("customText").value;
+  var form = this;
 
-  const total = 250 * quantity;
+  var name = document.getElementById("name").value;
 
-  const message =
-    "🛍️ NEW PHOTO FRAME ORDER%0A%0A" +
-    "👤 Name: " + name + "%0A" +
-    "📱 Mobile: " + mobile + "%0A" +
-    "🖼️ Frame: " + frame + "%0A" +
-    "🔢 Quantity: " + quantity + "%0A" +
-    "💰 Total: ₹" + total + "%0A" +
-    "📍 Address: " + address + "%0A" +
-    "✍️ Custom Text: " + customText + "%0A%0A" +
-    "📸 Photo WhatsApp पर भेजूँगा।";
+  var mobile = document.getElementById("mobile").value;
 
-  window.open(
-    "https://wa.me/919238816125?text=" + message,
-    "_blank"
-  );
-}
+  var quantity = document.getElementById("quantity").value;
+
+  var address = document.getElementById("address").value;
+
+  var customText = document.getElementById("customText").value;
+
+  var total = 250 * Number(quantity);
+
+  document.getElementById("totalAmount").value = "₹" + total;
+
+  var button = document.getElementById("submitBtn");
+
+  button.disabled = true;
+
+  button.innerText = "Order भेजा जा रहा है...";
+
+
+  fetch(form.action, {
+
+    method: "POST",
+
+    body: new FormData(form),
+
+    headers: {
+      "Accept": "application/json"
+    }
+
+  })
+
+  .then(function(response) {
+
+    if (response.ok) {
+
+      form.style.display = "none";
+
+      document.getElementById("successBox").style.display = "block";
+
+
+      var message =
+        "नमस्ते, मैंने Photo Frame का Order किया है।\n\n" +
+        "नाम: " + name + "\n" +
+        "मोबाइल: " + mobile + "\n" +
+        "Quantity: " + quantity + "\n" +
+        "Total: ₹" + total + "\n" +
+        "पता: " + address + "\n" +
+        "Frame Text: " + customText + "\n\n" +
+        "यह मेरी Photo है।";
+
+
+      var whatsappURL =
+        "https://wa.me/919238816125?text=" +
+        encodeURIComponent(message);
+
+
+      document.getElementById("whatsappButton").href = whatsappURL;
+
+    } else {
+
+      alert("Order भेजने में समस्या हुई। दोबारा कोशिश करें।");
+
+      button.disabled = false;
+
+      button.innerText = "✅ PLACE ORDER";
+
+    }
+
+  })
+
+  .catch(function() {
+
+    alert("Internet connection में समस्या हुई।");
+
+    button.disabled = false;
+
+    button.innerText = "✅ PLACE ORDER";
+
+  });
+
+});
 
 </script>
 
