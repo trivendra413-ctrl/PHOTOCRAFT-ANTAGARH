@@ -4,484 +4,483 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PHOTOCRAFT-ANTAGARH | Personalized Gifts</title>
+<title>PHOTOCRAFT-ANTAGARH | Personalized Photo Frames</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  background:#fafafa;
-  color:#171717;
+    background:#f8f8f8;
+    color:#111;
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #eee;
 }
 
 .nav{
-  max-width:1150px;
-  height:70px;
-  margin:auto;
-  padding:0 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    max-width:1150px;
+    margin:auto;
+    height:70px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-  font-size:21px;
-  font-weight:900;
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:-.5px;
 }
 
 .logo span{
-  color:#e63946;
+    color:#e63946;
 }
 
-.nav-btn{
-  background:#111;
-  color:white;
-  text-decoration:none;
-  padding:11px 18px;
-  border-radius:30px;
-  font-weight:bold;
+.order-top{
+    text-decoration:none;
+    color:white;
+    background:#111;
+    padding:11px 18px;
+    border-radius:30px;
+    font-weight:bold;
 }
 
 .hero{
-  min-height:570px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:50px 20px;
-  background:
-    radial-gradient(circle at 15% 20%,#ffdce1,transparent 35%),
-    radial-gradient(circle at 85% 80%,#ffe5c7,transparent 35%),
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:
+    radial-gradient(circle at 15% 20%,#ffdfe4,transparent 35%),
+    radial-gradient(circle at 85% 80%,#ffe6ca,transparent 35%),
     #fff;
-  animation:fadeIn 1s ease;
+    animation:show .8s ease;
 }
 
 .hero-content{
-  max-width:850px;
+    max-width:850px;
 }
 
 .badge{
-  display:inline-block;
-  background:#111;
-  color:#fff;
-  padding:8px 16px;
-  border-radius:50px;
-  font-size:13px;
-  margin-bottom:22px;
+    display:inline-block;
+    background:#111;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:22px;
 }
 
 .hero h1{
-  font-size:clamp(42px,8vw,80px);
-  line-height:.95;
-  letter-spacing:-3px;
+    font-size:clamp(43px,8vw,82px);
+    line-height:.95;
+    letter-spacing:-4px;
 }
 
 .hero h1 span{
-  color:#e63946;
+    color:#e63946;
 }
 
 .hero p{
-  max-width:650px;
-  margin:25px auto;
-  color:#666;
-  line-height:1.7;
-  font-size:17px;
+    max-width:650px;
+    margin:25px auto;
+    color:#666;
+    line-height:1.7;
+    font-size:17px;
 }
 
-.hero-buttons{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.hero-buttons a{
-  padding:14px 23px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
+.buttons a{
+    padding:14px 24px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.primary{
-  background:#111;
-  color:white;
+.black{
+    background:#111;
+    color:#fff;
 }
 
-.secondary{
-  background:white;
-  color:#111;
-  border:1px solid #ddd;
+.white{
+    background:#fff;
+    color:#111;
+    border:1px solid #ddd;
 }
 
-.hero-buttons a:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(0,0,0,.12);
+.buttons a:hover{
+    transform:translateY(-4px);
 }
 
 .section{
-  max-width:1150px;
-  margin:auto;
-  padding:80px 20px;
+    max-width:1150px;
+    margin:auto;
+    padding:80px 20px;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:40px;
+.title{
+    text-align:center;
+    margin-bottom:40px;
 }
 
-.section-title small{
-  color:#e63946;
-  font-weight:bold;
-  letter-spacing:2px;
+.title small{
+    color:#e63946;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
-.section-title h2{
-  font-size:38px;
-  margin-top:10px;
+.title h2{
+    font-size:38px;
+    margin-top:10px;
 }
 
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .product{
-  background:white;
-  border-radius:24px;
-  padding:15px;
-  border:1px solid #eee;
-  box-shadow:0 15px 45px rgba(0,0,0,.07);
-  transition:.4s;
+    background:#fff;
+    padding:15px;
+    border-radius:25px;
+    border:1px solid #eee;
+    box-shadow:0 15px 45px rgba(0,0,0,.07);
+    transition:.4s;
 }
 
 .product:hover{
-  transform:translateY(-8px);
-  box-shadow:0 25px 60px rgba(0,0,0,.12);
+    transform:translateY(-8px);
 }
 
-.product-img{
-  height:360px;
-  overflow:hidden;
-  border-radius:18px;
-  background:#eee;
+.product-image{
+    height:370px;
+    border-radius:18px;
+    overflow:hidden;
+    background:#eee;
 }
 
-.product-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.6s;
-}
-
-.product:hover img{
-  transform:scale(1.06);
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .product-info{
-  padding:18px 5px 5px;
+    padding:18px 5px 5px;
 }
 
 .product-info h3{
-  font-size:22px;
+    font-size:22px;
 }
 
 .price{
-  color:#e63946;
-  font-size:28px;
-  font-weight:900;
-  margin:8px 0 15px;
+    font-size:29px;
+    font-weight:900;
+    color:#e63946;
+    margin:8px 0 15px;
 }
 
-.product-btn{
-  width:100%;
-  border:0;
-  background:#111;
-  color:#fff;
-  padding:15px;
-  border-radius:12px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-  transition:.3s;
+.buy{
+    width:100%;
+    border:0;
+    padding:15px;
+    background:#111;
+    color:white;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.product-btn:hover{
-  background:#e63946;
+.buy:hover{
+    background:#e63946;
 }
 
 .features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
 }
 
 .feature{
-  background:white;
-  padding:28px 20px;
-  border-radius:20px;
-  border:1px solid #eee;
-  text-align:center;
-  transition:.3s;
+    background:white;
+    padding:28px 20px;
+    text-align:center;
+    border-radius:20px;
+    border:1px solid #eee;
+    transition:.3s;
 }
 
 .feature:hover{
-  transform:translateY(-6px);
+    transform:translateY(-6px);
 }
 
-.feature-icon{
-  font-size:35px;
-  margin-bottom:12px;
+.icon{
+    font-size:35px;
+    margin-bottom:12px;
 }
 
 .feature p{
-  color:#777;
-  line-height:1.5;
-  margin-top:7px;
+    color:#777;
+    margin-top:8px;
+    line-height:1.5;
 }
 
-.order-area{
-  background:#111;
-  color:white;
-  padding:80px 20px;
+.order-section{
+    background:#111;
+    color:white;
+    padding:80px 20px;
 }
 
 .order-card{
-  max-width:650px;
-  margin:auto;
-  background:#181818;
-  padding:30px;
-  border-radius:25px;
-  box-shadow:0 25px 80px rgba(0,0,0,.35);
+    max-width:680px;
+    margin:auto;
+    background:#181818;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 25px 80px rgba(0,0,0,.4);
 }
 
 .order-card h2{
-  font-size:32px;
+    font-size:32px;
 }
 
-.order-card > p{
-  color:#aaa;
-  margin:8px 0 25px;
+.subtitle{
+    color:#aaa;
+    margin:8px 0 25px;
 }
 
-label{
-  display:block;
-  margin:16px 0 7px;
-  font-weight:bold;
+label.main-label{
+    display:block;
+    margin:17px 0 7px;
+    font-weight:bold;
 }
 
 input,
 select,
 textarea{
-  width:100%;
-  padding:14px;
-  border-radius:10px;
-  border:1px solid #333;
-  background:#222;
-  color:white;
-  font-size:16px;
-  outline:none;
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:1px solid #3b3b3b;
+    background:#222;
+    color:white;
+    font-size:16px;
+    outline:none;
 }
 
 input:focus,
 select:focus,
 textarea:focus{
-  border-color:#e63946;
+    border-color:#e63946;
+}
+
+select option{
+    background:#222;
+    color:white;
 }
 
 textarea{
-  min-height:95px;
-  resize:vertical;
+    min-height:100px;
+    resize:vertical;
 }
 
-.option-group{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:8px;
+.option-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
 }
 
-.option{
-  border:1px solid #444;
-  border-radius:12px;
-  padding:15px;
-  cursor:pointer;
-  transition:.3s;
+.choice{
+    border:1px solid #444;
+    border-radius:12px;
+    padding:15px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.option:hover{
-  border-color:#e63946;
+.choice:hover{
+    border-color:#e63946;
 }
 
-.option input{
-  width:auto;
-  margin-right:8px;
+.choice input{
+    width:auto;
+    margin-right:7px;
 }
 
-.option strong{
-  display:block;
-  margin-bottom:5px;
+.choice strong{
+    display:block;
+    margin-bottom:5px;
 }
 
-.option small{
-  color:#aaa;
+.choice small{
+    color:#999;
 }
 
 #addressBox,
-#upiBox{
-  display:none;
+#upiBox,
+#otherBox{
+    display:none;
 }
 
-.upi-box{
-  margin-top:15px;
-  padding:18px;
-  background:#242424;
-  border:1px solid #444;
-  border-radius:15px;
-  text-align:center;
+.upi{
+    margin-top:15px;
+    padding:20px;
+    border-radius:15px;
+    background:#242424;
+    border:1px solid #444;
+    text-align:center;
 }
 
 .upi-id{
-  display:inline-block;
-  margin:10px 0;
-  padding:10px 15px;
-  background:#111;
-  border-radius:8px;
-  color:#ffd166;
-  font-weight:bold;
-  font-size:18px;
+    display:inline-block;
+    margin:10px 0;
+    background:#111;
+    padding:10px 16px;
+    border-radius:8px;
+    color:#ffd166;
+    font-weight:bold;
+    font-size:19px;
 }
 
-.upi-pay{
-  display:block;
-  text-decoration:none;
-  background:#25D366;
-  color:white;
-  padding:13px;
-  border-radius:10px;
-  font-weight:bold;
-  margin-top:8px;
+.pay-btn{
+    display:block;
+    text-decoration:none;
+    background:#25d366;
+    color:#fff;
+    padding:13px;
+    border-radius:10px;
+    font-weight:bold;
 }
 
 .submit{
-  width:100%;
-  border:0;
-  padding:16px;
-  margin-top:22px;
-  border-radius:12px;
-  background:#e63946;
-  color:white;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
+    width:100%;
+    margin-top:22px;
+    padding:16px;
+    border:0;
+    border-radius:12px;
+    background:#e63946;
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.submit:hover{
-  transform:translateY(-2px);
+.submit:disabled{
+    opacity:.6;
 }
 
 .success{
-  display:none;
-  text-align:center;
-  padding:25px 0;
+    display:none;
+    text-align:center;
+    padding:25px 0 5px;
 }
 
 .success h2{
-  color:#4ade80;
-  margin-bottom:10px;
+    color:#4ade80;
+    margin-bottom:10px;
 }
 
 .whatsapp{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 22px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  border-radius:10px;
-  font-weight:bold;
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 22px;
+    background:#25d366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
 }
 
 footer{
-  background:#080808;
-  color:#aaa;
-  text-align:center;
-  padding:30px 20px;
-  line-height:2;
+    background:#080808;
+    color:#aaa;
+    text-align:center;
+    padding:30px 20px;
+    line-height:2;
 }
 
 footer strong{
-  color:white;
+    color:white;
 }
 
-@keyframes fadeIn{
-  from{
-    opacity:0;
-    transform:translateY(25px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+@keyframes show{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 @media(max-width:600px){
 
-  .logo{
-    font-size:17px;
-  }
+    .logo{
+        font-size:17px;
+    }
 
-  .nav-btn{
-    padding:9px 13px;
-    font-size:12px;
-  }
+    .order-top{
+        padding:9px 13px;
+        font-size:12px;
+    }
 
-  .hero{
-    min-height:550px;
-  }
+    .hero{
+        min-height:540px;
+    }
 
-  .hero h1{
-    letter-spacing:-2px;
-  }
+    .hero h1{
+        letter-spacing:-2px;
+    }
 
-  .section{
-    padding:60px 15px;
-  }
+    .section{
+        padding:60px 15px;
+    }
 
-  .section-title h2{
-    font-size:30px;
-  }
+    .title h2{
+        font-size:30px;
+    }
 
-  .product-img{
-    height:330px;
-  }
+    .product-image{
+        height:330px;
+    }
 
-  .order-card{
-    padding:22px;
-  }
+    .order-card{
+        padding:22px;
+    }
 
-  .option-group{
-    grid-template-columns:1fr;
-  }
+    .option-grid{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
@@ -489,483 +488,574 @@ footer strong{
 <body>
 
 <header>
-<nav class="nav">
+    <nav class="nav">
 
-<div class="logo">
-PHOTO<span>CRAFT</span>
-</div>
+        <div class="logo">
+            PHOTO<span>CRAFT</span>
+        </div>
 
-<a href="#order" class="nav-btn">
-Order Now
-</a>
+        <a href="#order" class="order-top">
+            Order Now
+        </a>
 
-</nav>
+    </nav>
 </header>
 
 
 <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="badge">
-🎁 PERSONALIZED GIFTS • ANTAGARH
-</div>
+        <div class="badge">
+            🎁 PERSONALIZED GIFTS • ANTAGARH
+        </div>
 
-<h1>
-आपकी यादें,<br>
-<span>हमारे Frame में.</span>
-</h1>
+        <h1>
+            आपकी यादें,<br>
+            <span>हमारे Frame में.</span>
+        </h1>
 
-<p>
-अपनी सबसे खूबसूरत यादों को एक शानदार
-Personalized Photo Frame में बदलें।
-Birthday, Anniversary, Teachers Day और हर खास मौके के लिए।
-</p>
+        <p>
+            अपनी सबसे खूबसूरत यादों को एक शानदार
+            Personalized Photo Frame में बदलें।
+            Birthday, Marriage, Anniversary और हर खास मौके के लिए।
+        </p>
 
-<div class="hero-buttons">
+        <div class="buttons">
 
-<a href="#products" class="primary">
-🖼️ Frames देखें
-</a>
+            <a href="#products" class="black">
+                🖼️ Frames देखें
+            </a>
 
-<a href="#order" class="secondary">
-Order Now →
-</a>
+            <a href="#order" class="white">
+                Order Now →
+            </a>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
 <section class="section" id="products">
 
-<div class="section-title">
+    <div class="title">
 
-<small>OUR COLLECTION</small>
+        <small>OUR COLLECTION</small>
 
-<h2>Personalized Frames</h2>
+        <h2>Personalized Frames</h2>
 
-</div>
+    </div>
 
 
-<div class="product-grid">
+    <div class="products">
 
-<div class="product">
+        <div class="product">
 
-<div class="product-img">
+            <div class="product-image">
 
-<img
-src="frame1.jpg"
-alt="Personalized Photo Frame"
->
+                <!-- GitHub में अपनी photo का नाम frame1.jpg रखें -->
+                <img
+                    src="frame1.jpg"
+                    alt="Premium Personalized Photo Frame"
+                >
 
-</div>
+            </div>
 
-<div class="product-info">
+            <div class="product-info">
 
-<h3>Premium Photo Frame</h3>
+                <h3>Premium Photo Frame</h3>
 
-<div class="price">
-₹250
-</div>
+                <div class="price">
+                    ₹250
+                </div>
 
-<button
-class="product-btn"
-onclick="openOrder()"
->
-🛒 ORDER NOW
-</button>
+                <button
+                    class="buy"
+                    onclick="openOrder()"
+                >
+                    🛒 ORDER NOW
+                </button>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
 <section class="section">
 
-<div class="section-title">
+    <div class="title">
 
-<small>WHY US</small>
+        <small>WHY PHOTOCRAFT</small>
 
-<h2>Gift With Memories ❤️</h2>
+        <h2>Gift With Memories ❤️</h2>
 
-</div>
-
-
-<div class="features">
-
-<div class="feature">
-
-<div class="feature-icon">🖼️</div>
-
-<h3>Custom Design</h3>
-
-<p>
-आपकी पसंद के अनुसार Personalized Frame.
-</p>
-
-</div>
+    </div>
 
 
-<div class="feature">
+    <div class="features">
 
-<div class="feature-icon">✨</div>
+        <div class="feature">
 
-<h3>Premium Quality</h3>
+            <div class="icon">🖼️</div>
 
-<p>
-शानदार printing और finishing.
-</p>
+            <h3>Custom Design</h3>
 
-</div>
+            <p>
+                आपकी पसंद के अनुसार Personalized Frame.
+            </p>
 
-
-<div class="feature">
-
-<div class="feature-icon">🎁</div>
-
-<h3>Perfect Gift</h3>
-
-<p>
-हर खास मौके के लिए शानदार gift.
-</p>
-
-</div>
+        </div>
 
 
-<div class="feature">
+        <div class="feature">
 
-<div class="feature-icon">📱</div>
+            <div class="icon">✨</div>
 
-<h3>Easy Ordering</h3>
+            <h3>Premium Quality</h3>
 
-<p>
-Online order करें और Photo WhatsApp पर भेजें.
-</p>
+            <p>
+                शानदार printing और finishing.
+            </p>
 
-</div>
+        </div>
 
-</div>
+
+        <div class="feature">
+
+            <div class="icon">🎁</div>
+
+            <h3>Perfect Gift</h3>
+
+            <p>
+                हर खास मौके के लिए शानदार gift.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">📱</div>
+
+            <h3>Easy Ordering</h3>
+
+            <p>
+                Order करें और Photo WhatsApp पर भेजें.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section class="order-area" id="order">
+<section class="order-section" id="order">
+
+    <div class="order-card">
+
+        <h2>
+            Order Your Frame 🛍️
+        </h2>
+
+        <p class="subtitle">
+            नीचे details भरकर अपना order करें।
+        </p>
+
+
+        <form
+            id="orderForm"
+            action="https://formspree.io/f/maenzojd"
+            method="POST"
+        >
+
+            <label class="main-label">
+                आपका नाम *
+            </label>
+
+            <input
+                type="text"
+                name="Customer Name"
+                id="customerName"
+                placeholder="अपना नाम"
+                required
+            >
 
-<div class="order-card">
 
-<h2>
-Order Your Frame 🛍️
-</h2>
+            <label class="main-label">
+                मोबाइल नंबर *
+            </label>
+
+            <input
+                type="tel"
+                name="Mobile Number"
+                id="mobile"
+                placeholder="10 digit mobile number"
+                maxlength="10"
+                pattern="[0-9]{10}"
+                required
+            >
 
-<p>
-पहले Delivery और Payment option चुनें।
-</p>
 
+            <label class="main-label">
+                Quantity *
+            </label>
 
-<form
-id="orderForm"
-action="https://formspree.io/f/maenzojd"
-method="POST"
->
+            <input
+                type="number"
+                name="Quantity"
+                id="quantity"
+                value="1"
+                min="1"
+                required
+                oninput="calculateTotal()"
+            >
 
 
-<label>
-आपका नाम *
-</label>
+            <label class="main-label">
+                Frame किस अवसर के लिए है? *
+            </label>
 
-<input
-type="text"
-name="Customer Name"
-id="name"
-placeholder="अपना नाम"
-required
->
+            <select
+                name="Occasion"
+                id="occasion"
+                onchange="occasionChange()"
+                required
+            >
 
+                <option value="">
+                    -- Occasion चुनें --
+                </option>
 
-<label>
-मोबाइल नंबर *
-</label>
+                <option value="Birthday">
+                    🎂 Birthday
+                </option>
 
-<input
-type="tel"
-name="Mobile Number"
-id="mobile"
-placeholder="10 digit mobile number"
-maxlength="10"
-required
->
+                <option value="Marriage / Wedding">
+                    💍 Marriage / Wedding
+                </option>
 
+                <option value="Anniversary">
+                    ❤️ Anniversary
+                </option>
 
-<label>
-Quantity *
-</label>
+                <option value="Teacher's Day">
+                    👨‍🏫 Teacher's Day
+                </option>
 
-<input
-type="number"
-name="Quantity"
-id="quantity"
-value="1"
-min="1"
-required
->
+                <option value="Baby / Newborn">
+                    👶 Baby / Newborn
+                </option>
 
+                <option value="Family">
+                    👨‍👩‍👧‍👦 Family
+                </option>
 
-<label>
-आप Frame कैसे लेना चाहते हैं? *
-</label>
+                <option value="Graduation / Achievement">
+                    🎓 Graduation / Achievement
+                </option>
 
-<div class="option-group">
+                <option value="Couple">
+                    💖 Couple
+                </option>
 
-<label class="option">
+                <option value="Special Gift">
+                    🎁 Special Gift
+                </option>
 
-<input
-type="radio"
-name="Delivery Option"
-value="Shop Pickup"
-onclick="chooseDelivery('shop')"
-required
->
+                <option value="Festival">
+                    🪔 Festival
+                </option>
 
-<strong>🏪 Shop से लेना है</strong>
+                <option value="Other">
+                    ✨ Other
+                </option>
 
-<small>
-अंतागढ़ से स्वयं प्राप्त करें
-</small>
+            </select>
 
-</label>
 
+            <div id="otherBox">
 
-<label class="option">
+                <label class="main-label">
+                    अपना Occasion लिखें *
+                </label>
 
-<input
-type="radio"
-name="Delivery Option"
-value="Courier Delivery"
-onclick="chooseDelivery('courier')"
->
+                <input
+                    type="text"
+                    name="Other Occasion"
+                    id="otherOccasion"
+                    placeholder="जैसे: Retirement, Farewell..."
+                >
 
-<strong>🚚 Courier Delivery</strong>
+            </div>
 
-<small>
-आपके address पर delivery
-</small>
 
-</label>
+            <label class="main-label">
+                Frame कैसे प्राप्त करना चाहते हैं? *
+            </label>
 
-</div>
 
+            <div class="option-grid">
 
-<div id="addressBox">
+                <label class="choice">
 
-<label>
-Delivery Address *
-</label>
+                    <input
+                        type="radio"
+                        name="Delivery Option"
+                        value="Shop Pickup"
+                        onclick="chooseDelivery('shop')"
+                        required
+                    >
 
-<textarea
-name="Delivery Address"
-id="address"
-placeholder="नाम, गांव/शहर, थाना, जिला, पिन कोड"
-></textarea>
+                    <strong>
+                        🏪 Shop से लेना है
+                    </strong>
 
-</div>
+                    <small>
+                        Shop से स्वयं प्राप्त करें
+                    </small>
 
+                </label>
 
-<label>
-Payment Method *
-</label>
 
-<div class="option-group">
+                <label class="choice">
 
-<label class="option">
+                    <input
+                        type="radio"
+                        name="Delivery Option"
+                        value="Courier Delivery"
+                        onclick="chooseDelivery('courier')"
+                    >
 
-<input
-type="radio"
-name="Payment Method"
-value="Pay at Shop"
-onclick="choosePayment('shop')"
-required
->
+                    <strong>
+                        🚚 Courier Delivery
+                    </strong>
 
-<strong>💵 Shop Payment</strong>
+                    <small>
+                        Address पर delivery
+                    </small>
 
-<small>
-Shop पर payment करें
-</small>
+                </label>
 
-</label>
+            </div>
 
 
-<label class="option">
+            <div id="addressBox">
 
-<input
-type="radio"
-name="Payment Method"
-value="UPI Payment"
-onclick="choosePayment('upi')"
->
+                <label class="main-label">
+                    पूरा Delivery Address *
+                </label>
 
-<strong>📱 UPI Payment</strong>
+                <textarea
+                    name="Delivery Address"
+                    id="address"
+                    placeholder="नाम, गांव/शहर, थाना, जिला, पिन कोड"
+                ></textarea>
 
-<small>
-Online payment करें
-</small>
+            </div>
 
-</label>
 
-</div>
+            <label class="main-label">
+                Payment Method *
+            </label>
 
 
-<div id="upiBox">
+            <div class="option-grid">
 
-<div class="upi-box">
+                <label class="choice">
 
-<strong>
-📱 UPI से Payment करें
-</strong>
+                    <input
+                        type="radio"
+                        name="Payment Method"
+                        value="Pay at Shop"
+                        onclick="choosePayment('shop')"
+                        required
+                    >
 
-<br>
+                    <strong>
+                        💵 Shop Payment
+                    </strong>
 
-<div class="upi-id">
-tbx69@fam
-</div>
+                    <small>
+                        Shop पर payment
+                    </small>
 
-<a
-class="upi-pay"
-href="upi://pay?pa=tbx69@fam&pn=PHOTOCRAFT-ANTAGARH&cu=INR"
->
-💳 Pay Now
-</a>
+                </label>
 
-<p style="margin-top:12px;color:#aaa;font-size:13px;">
-Payment करने के बाद नीचे UTR / Transaction ID जरूर भरें।
-</p>
 
-<label>
-UTR / Transaction ID *
-</label>
+                <label class="choice">
 
-<input
-type="text"
-name="UTR / Transaction ID"
-id="utr"
-placeholder="Payment के बाद UTR number"
->
+                    <input
+                        type="radio"
+                        name="Payment Method"
+                        value="UPI Payment"
+                        onclick="choosePayment('upi')"
+                    >
 
-</div>
+                    <strong>
+                        📱 UPI Payment
+                    </strong>
 
-</div>
+                    <small>
+                        Online payment
+                    </small>
 
+                </label>
 
-<label>
-Frame पर क्या लिखना है?
-</label>
+            </div>
 
-<textarea
-name="Custom Text"
-id="customText"
-placeholder="जैसे: Happy Birthday Rahul ❤️"
-></textarea>
 
+            <div id="upiBox">
 
-<input
-type="hidden"
-name="Product"
-value="Premium Personalized Photo Frame"
->
+                <div class="upi">
 
+                    <strong>
+                        📱 UPI Payment
+                    </strong>
 
-<input
-type="hidden"
-name="Price Per Frame"
-value="₹250"
->
+                    <br>
 
+                    <div class="upi-id">
+                        tbx69@fam
+                    </div>
 
-<input
-type="hidden"
-name="Total Amount"
-id="totalAmount"
->
 
+                    <a
+                        class="pay-btn"
+                        href="upi://pay?pa=tbx69@fam&pn=PHOTOCRAFT-ANTAGARH&cu=INR"
+                    >
+                        💳 Pay Now
+                    </a>
 
-<input
-type="hidden"
-name="_subject"
-value="🛍️ NEW PHOTOCRAFT-ANTAGARH ORDER"
->
 
+                    <p style="margin-top:12px;color:#aaa;font-size:13px;">
+                        Payment करने के बाद UTR / Transaction ID नीचे भरें।
+                    </p>
 
-<button
-type="submit"
-class="submit"
-id="submitBtn"
->
-PLACE ORDER →
-</button>
 
-</form>
+                    <label class="main-label">
+                        UTR / Transaction ID *
+                    </label>
 
+                    <input
+                        type="text"
+                        name="UTR / Transaction ID"
+                        id="utr"
+                        placeholder="Payment के बाद UTR number"
+                    >
 
-<div
-class="success"
-id="success"
->
+                </div>
 
-<h2>
-🎉 Order Received!
-</h2>
+            </div>
 
-<p>
-आपका order successfully प्राप्त हो गया है।
-</p>
 
-<p style="margin-top:8px;">
-अब अपनी Photo WhatsApp पर भेजें।
-</p>
+            <label class="main-label">
+                Order Details / कोई विशेष जानकारी
+            </label>
 
-<a
-id="whatsapp"
-class="whatsapp"
-target="_blank"
->
-📸 SEND PHOTO ON WHATSAPP
-</a>
+            <textarea
+                name="Order Note"
+                placeholder="जैसे: 6 फोटो वाला frame चाहिए, black design चाहिए आदि"
+            ></textarea>
 
-</div>
 
-</div>
+            <input
+                type="hidden"
+                name="Product"
+                value="Premium Personalized Photo Frame"
+            >
+
+            <input
+                type="hidden"
+                name="Price Per Frame"
+                value="₹250"
+            >
+
+            <input
+                type="hidden"
+                name="Total Amount"
+                id="totalAmount"
+                value="₹250"
+            >
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="🛍️ NEW PHOTO FRAME ORDER - PHOTOCRAFT ANTARGARH"
+            >
+
+
+            <button
+                type="submit"
+                class="submit"
+                id="submitButton"
+            >
+                PLACE ORDER • ₹250
+            </button>
+
+        </form>
+
+
+        <div
+            class="success"
+            id="success"
+        >
+
+            <h2>
+                🎉 Order Received!
+            </h2>
+
+            <p>
+                आपका order successfully प्राप्त हो गया है।
+            </p>
+
+            <p style="margin-top:8px;color:#aaa;">
+                अब अपनी Photo WhatsApp पर भेजें।
+            </p>
+
+
+            <a
+                id="whatsappButton"
+                class="whatsapp"
+                target="_blank"
+            >
+                📸 SEND PHOTO ON WHATSAPP
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 <footer>
 
-<strong>
-PHOTOCRAFT-ANTAGARH
-</strong>
+    <strong>
+        PHOTOCRAFT-ANTAGARH
+    </strong>
 
-<br>
+    <br>
 
-Personalized Photo Frames & Gifts
+    Personalized Photo Frames & Gifts
 
-<br>
+    <br>
 
-📱 WhatsApp: 9238816125
+    📱 WhatsApp: 9238816125
 
-<br>
+    <br>
 
-📧 Kankeralert@gmail.com
+    📧 Kankeralert@gmail.com
 
-<br>
+    <br>
 
-© 2026 PHOTOCRAFT-ANTAGARH
+    © 2026 PHOTOCRAFT-ANTAGARH
 
 </footer>
 
@@ -974,76 +1064,120 @@ Personalized Photo Frames & Gifts
 
 function openOrder(){
 
-document
-.getElementById("order")
-.scrollIntoView({
-behavior:"smooth"
-});
+    document
+    .getElementById("order")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+function occasionChange(){
+
+    const occasion =
+    document.getElementById("occasion").value;
+
+    const otherBox =
+    document.getElementById("otherBox");
+
+    const otherInput =
+    document.getElementById("otherOccasion");
+
+
+    if(occasion === "Other"){
+
+        otherBox.style.display = "block";
+
+        otherInput.required = true;
+
+    }else{
+
+        otherBox.style.display = "none";
+
+        otherInput.required = false;
+
+        otherInput.value = "";
+
+    }
 
 }
 
 
 function chooseDelivery(type){
 
-var box =
-document.getElementById("addressBox");
+    const box =
+    document.getElementById("addressBox");
 
-var address =
-document.getElementById("address");
+    const address =
+    document.getElementById("address");
 
 
-if(type === "courier"){
+    if(type === "courier"){
 
-box.style.display = "block";
+        box.style.display = "block";
 
-address.required = true;
+        address.required = true;
 
-}
+    }else{
 
-else{
+        box.style.display = "none";
 
-box.style.display = "none";
+        address.required = false;
 
-address.required = false;
+        address.value = "";
 
-address.value = "";
-
-}
+    }
 
 }
 
 
 function choosePayment(type){
 
-var box =
-document.getElementById("upiBox");
+    const box =
+    document.getElementById("upiBox");
 
-var utr =
-document.getElementById("utr");
+    const utr =
+    document.getElementById("utr");
 
 
-if(type === "upi"){
+    if(type === "upi"){
 
-box.style.display = "block";
+        box.style.display = "block";
 
-utr.required = true;
+        utr.required = true;
 
-}
+    }else{
 
-else{
+        box.style.display = "none";
 
-box.style.display = "none";
+        utr.required = false;
 
-utr.required = false;
+        utr.value = "";
 
-utr.value = "";
-
-}
+    }
 
 }
 
 
-var form =
+function calculateTotal(){
+
+    const quantity =
+    Number(document.getElementById("quantity").value) || 1;
+
+    const total =
+    quantity * 250;
+
+    document.getElementById("totalAmount").value =
+    "₹" + total;
+
+    document.getElementById("submitButton").innerText =
+    "PLACE ORDER • ₹" + total;
+
+}
+
+
+const form =
 document.getElementById("orderForm");
 
 
@@ -1051,151 +1185,135 @@ form.addEventListener(
 "submit",
 async function(event){
 
-event.preventDefault();
+    event.preventDefault();
 
 
-var button =
-document.getElementById("submitBtn");
+    const button =
+    document.getElementById("submitButton");
+
+    const name =
+    document.getElementById("customerName").value;
+
+    const mobile =
+    document.getElementById("mobile").value;
+
+    const quantity =
+    Number(document.getElementById("quantity").value);
+
+    const occasion =
+    document.getElementById("occasion").value;
+
+    const otherOccasion =
+    document.getElementById("otherOccasion").value;
+
+    const address =
+    document.getElementById("address").value;
+
+    const utr =
+    document.getElementById("utr").value;
+
+    const delivery =
+    document.querySelector(
+        'input[name="Delivery Option"]:checked'
+    );
+
+    const payment =
+    document.querySelector(
+        'input[name="Payment Method"]:checked'
+    );
+
+    const total =
+    quantity * 250;
 
 
-var name =
-document.getElementById("name").value;
+    document.getElementById("totalAmount").value =
+    "₹" + total;
 
 
-var mobile =
-document.getElementById("mobile").value;
+    button.disabled = true;
+
+    button.innerText =
+    "ORDER SUBMITTING...";
 
 
-var quantity =
-Number(
-document.getElementById("quantity").value
-);
+    try{
+
+        const response =
+        await fetch(
+            form.action,
+            {
+                method:"POST",
+                body:new FormData(form),
+                headers:{
+                    "Accept":"application/json"
+                }
+            }
+        );
 
 
-var address =
-document.getElementById("address").value;
+        if(!response.ok){
+
+            throw new Error("Form submission failed");
+
+        }
 
 
-var customText =
-document.getElementById("customText").value;
+        form.style.display =
+        "none";
 
 
-var delivery =
-document.querySelector(
-'input[name="Delivery Option"]:checked'
-);
+        document.getElementById("success").style.display =
+        "block";
 
 
-var payment =
-document.querySelector(
-'input[name="Payment Method"]:checked'
-);
+        const finalOccasion =
+        occasion === "Other"
+        ? otherOccasion
+        : occasion;
 
 
-var utr =
-document.getElementById("utr").value;
+        const whatsappMessage =
+`नमस्ते PHOTOCRAFT-ANTAGARH 👋
+
+मैंने Photo Frame का Order किया है।
+
+👤 नाम: ${name}
+📱 मोबाइल: ${mobile}
+🔢 Quantity: ${quantity}
+
+🎁 Occasion: ${finalOccasion}
+
+🚚 Delivery: ${delivery ? delivery.value : ""}
+📍 Address: ${address || "Shop Pickup"}
+
+💳 Payment: ${payment ? payment.value : ""}
+🔐 UTR: ${utr || "Shop Payment"}
+
+💰 Total: ₹${total}
+
+📸 मेरी Photo इस message के साथ भेज रहा/रही हूँ।`;
 
 
-var total =
-250 * quantity;
+        document.getElementById(
+            "whatsappButton"
+        ).href =
+        "https://wa.me/919238816125?text=" +
+        encodeURIComponent(whatsappMessage);
 
 
-document.getElementById("totalAmount").value =
-"₹" + total;
+    }catch(error){
+
+        alert(
+            "Order submit नहीं हुआ। Internet connection check करके फिर try करें।"
+        );
 
 
-button.disabled = true;
+        button.disabled = false;
 
-button.innerText =
-"ORDER PROCESSING...";
+        button.innerText =
+        "PLACE ORDER • ₹" + total;
 
-
-try{
-
-var response =
-await fetch(
-form.action,
-{
-method:"POST",
-body:new FormData(form),
-headers:{
-"Accept":"application/json"
-}
-}
-);
-
-
-if(response.ok){
-
-form.style.display =
-"none";
-
-
-document.getElementById(
-"success"
-).style.display =
-"block";
-
-
-var message =
-"नमस्ते PHOTOCRAFT-ANTAGARH 👋\n\n" +
-
-"मैंने Photo Frame का Order किया है।\n\n" +
-
-"👤 नाम: " + name + "\n" +
-
-"📱 मोबाइल: " + mobile + "\n" +
-
-"🔢 Quantity: " + quantity + "\n" +
-
-"🚚 Delivery: " +
-(delivery ? delivery.value : "") + "\n" +
-
-"📍 Address: " +
-(address || "Shop Pickup") + "\n" +
-
-"💳 Payment: " +
-(payment ? payment.value : "") + "\n" +
-
-"🔐 UTR: " +
-(utr || "Shop Payment") + "\n" +
-
-"💰 Total: ₹" + total + "\n" +
-
-"✍️ Frame Text: " +
-customText + "\n\n" +
-
-"📸 यह मेरी Photo है।";
-
-
-document.getElementById(
-"whatsapp"
-).href =
-"https://wa.me/919238816125?text=" +
-encodeURIComponent(message);
-
-}
-
-else{
-
-throw new Error();
-
-}
-
-}
-
-catch(error){
-
-alert(
-"Order submit नहीं हुआ। कृपया Internet connection check करें।"
-);
-
-button.disabled = false;
-
-button.innerText =
-"PLACE ORDER →";
-
-}
+    }
 
 });
 
